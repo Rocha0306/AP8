@@ -1,0 +1,62 @@
+#include <stdio.h>
+ 
+int main() {
+ 
+int *PNumeros;
+int *PSomaNumeros;
+int *PResultado;
+int *PI;
+ 
+int SomaNumeros = 0;
+int Resultado;
+int VariavelNum;
+int i = 0;
+ 
+ 
+PSomaNumeros = &SomaNumeros;
+PNumeros = &VariavelNum;
+PResultado = &Resultado;
+PI = &i;
+ 
+ 
+ 
+for(;;) {
+    printf("\nDigite um numero: ");
+    scanf("%d", PNumeros);
+ 
+    if(*PNumeros > 0) {
+        *PSomaNumeros += *PNumeros;
+        i++;
+ 
+    }
+ 
+    else {
+        *PResultado = (*PSomaNumeros / i);
+        printf("\nResultado: %d", *PResultado);
+        break;
+    }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+return 0;
+ 
+ 
+}
